@@ -1,12 +1,12 @@
 {
-  "name": "08-user-store",
+  "name": "app-store",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "tsnd --respawn --clear src/index.ts",
     "build": "tsc",
-    "start": "npm run build && node dist/index.js"
+    "start": "node dist/index.js"
   },
   "keywords": [],
   "author": "Carolina Hermosillo",
