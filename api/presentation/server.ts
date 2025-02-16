@@ -1,5 +1,6 @@
 import express, { Router } from 'express';
 import path from 'path';
+import cors from 'cors';
 
 interface Options {
   port: number;
@@ -23,6 +24,13 @@ export class Server {
   }
   
   async start() {
+
+    this.app.use(cors({
+      origin: '*', // Permite todas las URLs
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+      allowedHeaders: ['Content-Type', 'Authorization'],
+      credentials: true
+    }));
     
     //* Middlewares
     this.app.use( express.json() ); // raw
