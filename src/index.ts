@@ -11,6 +11,8 @@ async function main() {
     dbName  : envs.MONGO_DB_NAME,
     mongoUrl: envs.MONGO_URL, 
   })
+    .then(result => console.log(result))
+    .catch(err => console.log(err))
 
   const server = new Server({
     port  : envs.PORT,
