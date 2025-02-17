@@ -13,6 +13,11 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      JWT_SEED      : ${{ secrets.JWT_SEED }}
+      MONGO_DB_NAME : ${{ secrets.MONGO_DB_NAME }}
+      MONGO_URL     : ${{ secrets.MONGO_URL }}
+      PORT          : ${{ secrets.PORT }}
     steps:
       - name: Checkout del código
         uses: actions/checkout@v3
