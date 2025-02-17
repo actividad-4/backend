@@ -25,7 +25,6 @@ describe('Product Service', () => {
 
   it('debería obtener una lista de productos', async () => {
     const { products } = await productService.getProducts({user: testUserId});
-    console.log(products);
     expect(products).toBeInstanceOf(Array);
   });
 });
